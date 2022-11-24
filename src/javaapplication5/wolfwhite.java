@@ -5,16 +5,19 @@ import java.awt.Toolkit;
 import java.awt.geom.Rectangle2D;
 import java.net.URL;
 
-public class Ghost {
+public class wolfwhite {
 
     Image img;
-    public int x = 840;
-    public int y = 488;
+    public int x = 800;
+    public int y = 240;
     public int count = 0;
     public int HP = 2;
 
-    Ghost() {
-        String imageLocation = "wolf1.gif";
+    int speed0 = 2;
+    int speed = 2;
+
+    wolfwhite() {
+        String imageLocation = "pic/wolfwhite.gif";
         URL imageURL = this.getClass().getResource(imageLocation);
         img = Toolkit.getDefaultToolkit().getImage(imageURL);
         runner.start();
@@ -23,7 +26,7 @@ public class Ghost {
     Thread runner = new Thread(new Runnable() {
         public void run() {
             while (true) {
-                x -= 2;
+                x -= speed;
                 if (x <= 0) {
                     img = null;
                     runner = null;
@@ -70,6 +73,6 @@ public class Ghost {
     }
 
     public Rectangle2D getbound() {
-        return (new Rectangle2D.Double(x, y, 840, 488));
+        return (new Rectangle2D.Double(x, 0, 840, 800));
     }
 }

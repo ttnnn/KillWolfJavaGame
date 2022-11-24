@@ -5,19 +5,22 @@ import java.awt.Toolkit;
 import java.awt.geom.Rectangle2D;
 import java.net.URL;
 
-public class ball5 {
+public class wolfbrown {
 
     Image img;
-    public int x = 1300;// (int) ((Math.random() * 300) + 40)
-    public int y = 550;
+    public int x = 800;
+    public int y = 250;
     public int w = 200;
     public int h = 200;
 
     public int count = 0;
     public int HP = 3;
 
-    ball5() {
-        String imageLocation = "wolf.gif";
+    int speed0 = 3;
+    int speed = 3;
+
+    wolfbrown() {
+        String imageLocation = "pic/wolfbrown.gif";
         URL imageURL1 = this.getClass().getResource(imageLocation);
         img = Toolkit.getDefaultToolkit().getImage(imageURL1);
         runner.start();
@@ -26,7 +29,7 @@ public class ball5 {
     Thread runner = new Thread(new Runnable() {
         public void run() {
             while (true) {
-                x -= 3;
+                x -= speed;
                 if (x <= 0) {
                     img = null;
                     runner = null;
