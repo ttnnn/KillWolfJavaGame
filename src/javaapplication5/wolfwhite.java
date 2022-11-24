@@ -12,9 +12,8 @@ public class wolfwhite {
     public int y = 240;
     public int count = 0;
     public int HP = 2;
-
     int speed0 = 2;
-    int speed = 2;
+    int speed = 5;
 
     wolfwhite() {
         String imageLocation = "pic/wolfwhite.gif";

@@ -75,7 +75,7 @@ public class playstage1 extends JPanel implements ActionListener {
             while (true) {
                 try {
                     if (startball == false) {
-                        Thread.sleep((long) (Math.random() * 10000) + 2000);
+                        Thread.sleep((long) (Math.random() * 5000));
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
